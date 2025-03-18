@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations - Webconsulting</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .formations-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .formation-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .formation-card h2 {
+            color: #333;
+        }
+        .formation-card p {
+            color: #666;
+        }
+        .formation-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .formation-card a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2><i class="fa fa-book-reader mr-3"></i> WebConsulting</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="formations-container">
+        <h1>Nos Formations</h1>
+
+        <div class="formation-card">
+            <h2>Formation en Développement Web</h2>
+            <p>Apprenez à créer des sites web modernes et responsives avec HTML, CSS, JavaScript et PHP.</p>
+            <p><strong>Durée :</strong> 3 mois</p>
+            <p><strong>Objectifs :</strong> Maîtriser les bases du développement web et créer un projet complet.</p>
+            <form action="inscription.php" method="POST">
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+
+        <div class="formation-card">
+            <h2>Formation en Développement d'Applications Mobiles</h2>
+            <p>Découvrez comment développer des applications mobiles pour iOS et Android avec React Native.</p>
+            <p><strong>Durée :</strong> 6 mois</p>
+            <p><strong>Objectifs :</strong> Créer et publier une application mobile fonctionnelle.</p>
+            <form action="inscription.php" method="POST">
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+
+        <div class="formation-card">
+            <h2>Formation en Création d'API</h2>
+            <p>Apprenez à concevoir et implémenter des API robustes et sécurisées avec Node.js et Express.</p>
+            <p><strong>Durée :</strong> 4 semaines</p>
+            <p><strong>Objectifs :</strong> Comprendre les principes des API et créer une API RESTful.</p>
+            <form action="inscription.php" method="POST">
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+
+        <div class="formation-card">
+            <h2>Formation en Gestion de Projets Informatiques</h2>
+            <p>Maîtrisez les méthodologies Agile et Scrum pour gérer efficacement vos projets informatiques.</p>
+            <p><strong>Durée :</strong> 5 semaines</p>
+            <p><strong>Objectifs :</strong> Devenir un chef de projet compétent et certifié.</p>
+            <form action="inscription.php" method="POST">
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Webconsulting. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
