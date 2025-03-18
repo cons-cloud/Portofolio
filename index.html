@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webconsulting - Développement Informatique</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2><i class="fa fa-book-reader mr-3"></i> WebConsulting</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue chez <span>Webconsulting</span></h1>
+            <p>Votre partenaire en développement informatique.</p>
+            <a href="#contact" class="btn">Contactez-nous</a>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <h2>Nos Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Développement Informatique</h3>
+                <p>Des solutions logicielles sur mesure pour répondre à vos besoins.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-globe"></i>
+                <h3>Création de Sites Web</h3>
+                <p>Des sites web modernes, responsives et optimisés pour le référencement.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Applications Mobiles et Web</h3>
+                <p>Applications intuitives et performantes pour iOS, Android et le web.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Création d'API</h3>
+                <p>Des API robustes et sécurisées pour interconnecter vos systèmes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <a href="https://github.com/cons-cloud/Learn" target="_blank" class="portfolio-item">
+                <img src="images/project1.jpg" alt="Site web de cours en ligne">
+                <div class="overlay">
+                    <h3>LEARN</h3>
+                    <p>Site web de cours en ligne en cours de préparation.</p>
+                </div>
+            </a>
+            <a href="https://github.com/cons-cloud/chrome-extention-github" target="_blank" class="portfolio-item">
+                <img src="images/ICON.png" alt="Extension Chrome pour scraper les posts">
+                <div class="overlay">
+                    <h3>API CHROME EXTENSION</h3>
+                    <p>Création d'une API Chrome Extension pour scraper les posts des utilisateurs Facebook et LinkedIn.</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/cons-cloud/site-web-de-telechargement-de-musique" target="_blank" class="portfolio-item">
+                <img src="images/ICON.png" alt="Extension Chrome pour scraper les posts">
+                <div class="overlay">
+                    <h3>SITE WEB DE MUSIQUE</h3>
+                    <p>Création d'un site web convertisseur des chants youtube en audio.</p>
+                </div>
+            </a>
+            
+            <!-- Ajoutez plus de projets ici -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contactez-nous</h2>
+        <div class="contact-container">
+            <form action="submit_form.php" method="POST" id="contactForm">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Webconsulting66@gmail.com">Webconsulting66@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="https://wa.me/212600989761" target="_blank">+212600989761</a></p>
+                <p><i class="fas fa-phone"></i> <a href="https://wa.me/212669444701" target="_blank">+212669444701</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Meknès, Maroc</p>
+            </div>
+        </div>
+        <div id="map" style="height: 400px; width: 100%; margin-top: 20px;"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Webconsulting. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function initMap() {
+            const location = { lat: 33.892166, lng: -5.540515 }; // Coordonnées de Meknès
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: location,
+            });
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "Webconsulting",
+            });
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+</body>
+</html>
